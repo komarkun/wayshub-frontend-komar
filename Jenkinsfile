@@ -26,7 +26,7 @@ pipeline {
                sshagent([secret]){
                   sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
                   cd ${directory}
-                  docker buildx build -t ${namebuild}:${tag} .
+                  docker buildx build -t ${namebuild}:${tag} -f Dockerfile-prod .
                   echo "Build code telah selesai"
                   exit
 		  EOF""" 
