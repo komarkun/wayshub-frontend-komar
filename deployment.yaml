@@ -20,10 +20,3 @@ spec:
           image: komarkun/wayshub-frontend-prod:latest
           ports:
             - containerPort: 80
-          resources:
-            limits:
-              cpu: "500m"
-              memory: "256Mi"
-            requests:
-              cpu: "250m"
-              memory: "128Mi"
